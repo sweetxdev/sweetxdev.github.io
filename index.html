@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonts: Inter for small text, VT323 for pixelated name -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Enter Screen (To enable audio autoplay) -->
+    <div id="enter-screen">
+        <p class="enter-text">[ click ]</p>
+    </div>
+
+    <!-- Audio Toggle Button (Top Left) -->
+    <button id="audio-toggle" class="audio-btn hidden">
+        <i class="fas fa-volume-up"></i>
+    </button>
+
+    <!-- View Counter (Floating Left) -->
+    <div class="view-counter hidden" id="view-counter-el">
+        <i class="fas fa-eye"></i> <span id="view-count">473</span>
+    </div>
+
+    <!-- Background Video -->
+    <div class="video-container">
+        <!-- Play controlled by JS on click -->
+        <video id="bg-video" loop playsinline>
+            <source src="assets/gregorbaba.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Main Content (No Box, Floating) -->
+    <main id="main-content" class="hidden">
+        
+        <!-- Big Avatar (Circle) -->
+        <div class="big-avatar-container">
+            <img id="avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Profile">
+        </div>
+
+        <!-- Trembling Pixel Username -->
+        <h1 id="username" class="tremble">...</h1>
+
+        <!-- Activity Card (Discord Style) -->
+        <div class="activity-card">
+            <div class="activity-avatar-wrapper">
+                <img id="activity-avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Activity Avatar">
+                <div id="status-indicator" class="status dnd"></div>
+            </div>
+            <div class="activity-info">
+                <div class="activity-name-row">
+                    <span id="activity-username" class="act-name">User</span>
+                    <!-- You can add a badge icon here if needed -->
+                </div>
+                <p id="activity-details" class="act-details">Loading...</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
